@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>ayisin blog</title>
+</head>
+<body>
+
+    <div id="blogger">
+        <h1>{{h1}}</h1>
+        <p class="result">{{p1}}</p>
+        <span>{{note}}</span>
+       
+        <input type="text" v-model.lazy="title" placeholder="enter title" id="title">
+<br>
+<br>
+
+        <input type="text" v-model.lazy="blogpost" placeholder="blog content" id="blog">
+<br>
+<br>
+
+
+<input type="text" v-model.lazy="publisher" placeholder="name of publisher" id="publisher">
+<br>
+<br>
+<input type="date" v-model.lazy="date" placeholder="date" id="date">
+<br>
+
+        <p class="result">{{result}}</p>
+      
+<div class="output">
+    <img src="img1.png" alt="$">
+    <p class="title-display">title :{{title}}</p>
+    <p class="blog">blog content :{{blogpost}}</p>
+    <p class="publisher">publisher :{{publisher}}</p>
+    <p class="time">date :{{date}}</p>
+
+
+<button class="btn" v-on:click="alert('blog submitted :)')"> publish</button>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
